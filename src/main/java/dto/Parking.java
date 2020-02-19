@@ -1,4 +1,4 @@
-package Parking.dto;
+package dto;
 
 public class Parking {
 	private Integer parkId;

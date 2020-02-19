@@ -1,47 +1,84 @@
-package Parking.dto;
+package dto;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Ticket {
 	private Integer TickId;
 	private String TickUser;
-	private String TickReserva1;
-	private String TickReserva2;
-	private String TickReserva3;
+	private String TickParking;
+	private LocalDate TickFecha;
+	private LocalTime TickHoraIni;
+	private LocalTime TickHoraFin;
 	
-	//constructor con una reserva//
-	public Ticket(Integer tickId, String tickUser, String tickReserva1) {
+	public Ticket(Integer tickId, String tickUser, String tickParking, LocalDate tickFecha, LocalTime tickHoraIni,
+			LocalTime tickHoraFin) {
 		super();
 		TickId = tickId;
 		TickUser = tickUser;
-		TickReserva1 = tickReserva1;
+		TickParking = tickParking;
+		TickFecha = tickFecha;
+		TickHoraIni = tickHoraIni;
+		TickHoraFin = tickHoraFin;
 	}
-	
-	//constructor con dos reservas//
-	public Ticket(Integer tickId, String tickUser, String tickReserva1, String tickReserva2) {
-		super();
-		TickId = tickId;
-		TickUser = tickUser;
-		TickReserva1 = tickReserva1;
-		TickReserva2 = tickReserva2;
+
+	public Integer getTickId() {
+		return TickId;
 	}
-	
-	//constructor con tres reservas//
-	public Ticket(Integer tickId, String tickUser, String tickReserva1, String tickReserva2, String tickReserva3) {
-		super();
+
+	public void setTickId(Integer tickId) {
 		TickId = tickId;
+	}
+
+	public String getTickUser() {
+		return TickUser;
+	}
+
+	public void setTickUser(String tickUser) {
 		TickUser = tickUser;
-		TickReserva1 = tickReserva1;
-		TickReserva2 = tickReserva2;
-		TickReserva3 = tickReserva3;
+	}
+
+	public String getTickParking() {
+		return TickParking;
+	}
+
+	public void setTickParking(String tickParking) {
+		TickParking = tickParking;
+	}
+
+	public LocalDate getTickFecha() {
+		return TickFecha;
+	}
+
+	public void setTickFecha(LocalDate tickFecha) {
+		TickFecha = tickFecha;
+	}
+
+	public LocalTime getTickHoraIni() {
+		return TickHoraIni;
+	}
+
+	public void setTickHoraIni(LocalTime tickHoraIni) {
+		TickHoraIni = tickHoraIni;
+	}
+
+	public LocalTime getTickHoraFin() {
+		return TickHoraFin;
+	}
+
+	public void setTickHoraFin(LocalTime tickHoraFin) {
+		TickHoraFin = tickHoraFin;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((TickFecha == null) ? 0 : TickFecha.hashCode());
+		result = prime * result + ((TickHoraFin == null) ? 0 : TickHoraFin.hashCode());
+		result = prime * result + ((TickHoraIni == null) ? 0 : TickHoraIni.hashCode());
 		result = prime * result + ((TickId == null) ? 0 : TickId.hashCode());
-		result = prime * result + ((TickReserva1 == null) ? 0 : TickReserva1.hashCode());
-		result = prime * result + ((TickReserva2 == null) ? 0 : TickReserva2.hashCode());
-		result = prime * result + ((TickReserva3 == null) ? 0 : TickReserva3.hashCode());
+		result = prime * result + ((TickParking == null) ? 0 : TickParking.hashCode());
 		result = prime * result + ((TickUser == null) ? 0 : TickUser.hashCode());
 		return result;
 	}
@@ -55,25 +92,30 @@ public class Ticket {
 		if (getClass() != obj.getClass())
 			return false;
 		Ticket other = (Ticket) obj;
+		if (TickFecha == null) {
+			if (other.TickFecha != null)
+				return false;
+		} else if (!TickFecha.equals(other.TickFecha))
+			return false;
+		if (TickHoraFin == null) {
+			if (other.TickHoraFin != null)
+				return false;
+		} else if (!TickHoraFin.equals(other.TickHoraFin))
+			return false;
+		if (TickHoraIni == null) {
+			if (other.TickHoraIni != null)
+				return false;
+		} else if (!TickHoraIni.equals(other.TickHoraIni))
+			return false;
 		if (TickId == null) {
 			if (other.TickId != null)
 				return false;
 		} else if (!TickId.equals(other.TickId))
 			return false;
-		if (TickReserva1 == null) {
-			if (other.TickReserva1 != null)
+		if (TickParking == null) {
+			if (other.TickParking != null)
 				return false;
-		} else if (!TickReserva1.equals(other.TickReserva1))
-			return false;
-		if (TickReserva2 == null) {
-			if (other.TickReserva2 != null)
-				return false;
-		} else if (!TickReserva2.equals(other.TickReserva2))
-			return false;
-		if (TickReserva3 == null) {
-			if (other.TickReserva3 != null)
-				return false;
-		} else if (!TickReserva3.equals(other.TickReserva3))
+		} else if (!TickParking.equals(other.TickParking))
 			return false;
 		if (TickUser == null) {
 			if (other.TickUser != null)
@@ -85,11 +127,14 @@ public class Ticket {
 
 	@Override
 	public String toString() {
-		return "Ticket [TickId=" + TickId + ", TickUser=" + TickUser + ", TickReserva1=" + TickReserva1
-				+ ", TickReserva2=" + TickReserva2 + ", TickReserva3=" + TickReserva3 + "]";
+		return "Ticket [TickId=" + TickId + ", TickUser=" + TickUser + ", TickParking=" + TickParking + ", TickFecha="
+				+ TickFecha + ", TickHoraIni=" + TickHoraIni + ", TickHoraFin=" + TickHoraFin + "]";
 	}
 	
-		
+	
+	
+	
+	
 	
 	
 
