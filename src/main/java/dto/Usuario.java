@@ -1,6 +1,7 @@
 package dto;
 
 public class Usuario {
+	private Integer id;
 	private String nieDni;
 	private String email;
 	private String nombre;
@@ -12,10 +13,20 @@ public class Usuario {
 	private Boolean vehiculo2Electrico;
 	private String vehiculo3;
 	private Boolean vehiculo3Electrico;
+	private String password;
 	
-	public Usuario(String nieDni, String email, String nombre, String apellidos, String telefono, String vehiculo1,
-			Boolean vehiculo1Electrico) {
+	
+	
+	public Usuario(String email, String password) {
 		super();
+		this.email = email;
+		this.password = password;
+	}
+
+	public Usuario(Integer id, String nieDni, String email, String nombre, String apellidos, String telefono,
+			String vehiculo1, Boolean vehiculo1Electrico, String password) {
+		super();
+		this.id = id;
 		this.nieDni = nieDni;
 		this.email = email;
 		this.nombre = nombre;
@@ -23,11 +34,14 @@ public class Usuario {
 		this.telefono = telefono;
 		this.vehiculo1 = vehiculo1;
 		this.vehiculo1Electrico = vehiculo1Electrico;
+		this.password = password;
 	}
 
-	public Usuario(String nieDni, String email, String nombre, String apellidos, String telefono, String vehiculo1,
-			Boolean vehiculo1Electrico, String vehiculo2, Boolean vehiculo2Electrico) {
+	public Usuario(Integer id, String nieDni, String email, String nombre, String apellidos, String telefono,
+			String vehiculo1, Boolean vehiculo1Electrico, String vehiculo2, Boolean vehiculo2Electrico,
+			String password) {
 		super();
+		this.id = id;
 		this.nieDni = nieDni;
 		this.email = email;
 		this.nombre = nombre;
@@ -37,12 +51,14 @@ public class Usuario {
 		this.vehiculo1Electrico = vehiculo1Electrico;
 		this.vehiculo2 = vehiculo2;
 		this.vehiculo2Electrico = vehiculo2Electrico;
+		this.password = password;
 	}
 
-	public Usuario(String nieDni, String email, String nombre, String apellidos, String telefono, String vehiculo1,
-			Boolean vehiculo1Electrico, String vehiculo2, Boolean vehiculo2Electrico, String vehiculo3,
-			Boolean vehiculo3Electrico) {
+	public Usuario(Integer id, String nieDni, String email, String nombre, String apellidos, String telefono,
+			String vehiculo1, Boolean vehiculo1Electrico, String vehiculo2, Boolean vehiculo2Electrico,
+			String vehiculo3, Boolean vehiculo3Electrico, String password) {
 		super();
+		this.id = id;
 		this.nieDni = nieDni;
 		this.email = email;
 		this.nombre = nombre;
@@ -54,6 +70,15 @@ public class Usuario {
 		this.vehiculo2Electrico = vehiculo2Electrico;
 		this.vehiculo3 = vehiculo3;
 		this.vehiculo3Electrico = vehiculo3Electrico;
+		this.password = password;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getNieDni() {
@@ -144,14 +169,24 @@ public class Usuario {
 		this.vehiculo3Electrico = vehiculo3Electrico;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((apellidos == null) ? 0 : apellidos.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nieDni == null) ? 0 : nieDni.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((telefono == null) ? 0 : telefono.hashCode());
 		result = prime * result + ((vehiculo1 == null) ? 0 : vehiculo1.hashCode());
 		result = prime * result + ((vehiculo1Electrico == null) ? 0 : vehiculo1Electrico.hashCode());
@@ -181,6 +216,11 @@ public class Usuario {
 				return false;
 		} else if (!email.equals(other.email))
 			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
 		if (nieDni == null) {
 			if (other.nieDni != null)
 				return false;
@@ -190,6 +230,11 @@ public class Usuario {
 			if (other.nombre != null)
 				return false;
 		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (password == null) {
+			if (other.password != null)
+				return false;
+		} else if (!password.equals(other.password))
 			return false;
 		if (telefono == null) {
 			if (other.telefono != null)
@@ -231,12 +276,12 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [nieDni=" + nieDni + ", email=" + email + ", nombre=" + nombre + ", apellidos=" + apellidos
-				+ ", telefono=" + telefono + ", vehiculo1=" + vehiculo1 + ", vehiculo1Electrico=" + vehiculo1Electrico
-				+ ", vehiculo2=" + vehiculo2 + ", vehiculo2Electrico=" + vehiculo2Electrico + ", vehiculo3=" + vehiculo3
-				+ ", vehiculo3Electrico=" + vehiculo3Electrico + "]";
+		return "Usuario [id=" + id + ", nieDni=" + nieDni + ", email=" + email + ", nombre=" + nombre + ", apellidos="
+				+ apellidos + ", telefono=" + telefono + ", vehiculo1=" + vehiculo1 + ", vehiculo1Electrico="
+				+ vehiculo1Electrico + ", vehiculo2=" + vehiculo2 + ", vehiculo2Electrico=" + vehiculo2Electrico
+				+ ", vehiculo3=" + vehiculo3 + ", vehiculo3Electrico=" + vehiculo3Electrico + ", password=" + password
+				+ "]";
 	}
-	
 	
 	
 	

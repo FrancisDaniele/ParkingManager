@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hello, world!</title>
+</head>
+<body>
+ <!--HEEEEAAAADDDEEEERR-->
+    <style>
+        header{
+    width:2000px;
+    height:250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("img/parking-header.jpg");
+    }
+    .navbar-nav{
+        display:inline;
+    }
+    </style>
+
+<section class="container-fluid slider d-flex justify-content-center align-items-center">
+    <h1 class="display-4">Parking Manager</h1>
+</section>
+    <header></header>
+
+<nav class="navbar navbar-dark bg-dark navbar-toggleable-sm">
+
+    <a class="navbar-brand" href="header.html">
+        <img src="img/icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Parking Proyect
+    </a>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm">
+                <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </div>
+            <div class="col-sm">
+                <a class="nav-item nav-link" href="#">Plazas</a>
+            </div>
+            <div class="col-sm">
+                <a class="nav-item nav-link" href="#">Precios</a>
+            </div>
+                <div class="col-sm">
+                    <a class="nav-item nav-link" href="#">Horarios</a>
+                </div>
+
+<!--FORMULARIO USUARIOS-->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Formulario</button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Rellenar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Apellido</label>
+                                    <input type="password" class="form-control" id="apellidos" placeholder="Surname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Documento Identificativo</label>
+                                    <input type="password" class="form-control" id="nieDni" placeholder="DNI">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Telefono</label>
+                                    <input type="password" class="form-control" id="telefono" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Vehiculo 1</label>
+                                    <input type="password" class="form-control" id="vehiculo1" placeholder="Matricula">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Eléctrico</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Vehiculo 2</label>
+                                    <input type="password" class="form-control" id="vehiculo2" placeholder="Matricula">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                    <label class="form-check-label" for="exampleCheck1">Eléctrico</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Vehiculo 3</label>
+                                    <input type="password" class="form-control" id="vehiculo3" placeholder="Matricula">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                                    <label class="form-check-label" for="exampleCheck1">Eléctrico</label>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--FIN FORMULARIO USUARIOS-->
+
+        </div>
+    </div>
+</nav>
+ <!-- HEEEEAAAAADDDDEEEERRR FIN-->
+
+
+
+<!--FORMULARIOOO PARKIIIIIINGS-->
+ <div>
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal12" data-whatever="@getbootstrap">Parking Form</button>
+     <div class="modal fade" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelw" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel1">Formulario Parkings</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body">
+                     <form>
+                         <div class="form-group">
+                             <label for="exampleInputEmail1">Parking ID</label>
+                             <input type="text" class="form-control" id="par_id" aria-describedby="emailHelp" placeholder="ID">
+                             <small id="emailHelp1" class="form-text text-muted"></small>
+                         </div>
+
+                         <div class="form-group">
+                             <label for="exampleInputPassword1">Parking Name</label>
+                             <input type="text" class="form-control" id="par_name" placeholder="Name">
+                         </div>
+                         <div class="form-group">
+                             <label for="exampleFormControlSelect1">Municipios</label>
+                             <select class="form-control" id="exampleFormControlSelect1">
+                                 <option>Palma</option>
+                                 <option>Marratxi</option>
+                                 <option>Calviá</option>
+                                 <option>Alcudia</option>
+
+                             </select>
+                         </div>
+                         <div class="form-group">
+                             <label for="exampleInputPassword1">Plazas Totales</label>
+                             <input type="number" class="form-control" id="par_pTotales" placeholder="Numero">
+                         </div>
+
+
+                     </form>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">Send message</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+ <!--FORMUULARIO PARKIIINGS FIN-->
+
+ <!--FOOOOOTTTEEEEERR-->
+
+    <div class="container">
+
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark navbar-toggleable-sm">
+
+    </nav>
+
+    <div class="container">
+        <!-- Footer -->
+        <footer class="page-footer font-small stylish-color-dark pt-4">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 mx-auto">
+
+                        <!-- Content -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+                        <p>Disponemos del mejor servicio de estacionamieno por horas en la ciudad, podras registrarte en
+                            la web para realizar tus reservas y
+                            obtener los mejores descuentos.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Información</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Horarios</a>
+                            </li>
+                            <li>
+                                <a href="#!">Preguntas Frecuentes</a>
+                            </li>
+                            <li>
+                                <a href="#!">Como reservar</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Reservas</a>
+                            </li>
+                            <li>
+                                <a href="#!">Plazas</a>
+                            </li>
+                            <li>
+                                <a href="#!">Nuestros Parkings</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3"></i>Salvador Dalí, 3, 07011 Palma</p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> parkingmanager@gmail.com</p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> + 34 671 567 88</p>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> + 34 672 567 89</p>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <hr>
+
+            <!-- Call to action -->
+            <ul class="list-unstyled list-inline text-center py-2">
+                <li class="list-inline-item">
+                    <h5 class="mb-1">Register for free</h5>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+                </li>
+            </ul>
+            <!-- Call to action -->
+
+            <hr>
+
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <i class="fab fa-facebook-f"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <i class="fab fa-twitter"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                        <i class="fab fa-google-plus-g"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-dribbble mx-1">
+                        <i class="fab fa-dribbble"> </i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Social buttons -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

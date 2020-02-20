@@ -1,29 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Booking</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<jsp:include page="common/header.jsp"/>
 
 <div id="booking" class="section">
     <div class="section-center">
@@ -34,28 +11,7 @@
                         <h1>Reserva</h1>
                     </div>
                     <form>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <span class="form-label">Email</span>
-                                    <input class="form-control" type="email" placeholder="Intoroduce tu email" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <span class="form-label">Password/span>
-                                    <input class="form-control" type="email" placeholder="Intoroduce tu password" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="asientosCheck">
-                                <label class="form-check-label" for="asientosCheck">
-                                    Todos los asientos ocupados
-                                </label>
-                            </div>
-                        </div>
+                         
                         <div class="form-group">
                             <label for="inputState">Parking</label>
                             <select id="inputState" class="form-control">
@@ -118,6 +74,14 @@
                                             <span class="select-arrow"></span>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+			                            <div class="form-check">
+			                                <input class="form-check-input" type="checkbox" id="asientosCheck">
+			                                <label class="form-check-label" for="asientosCheck">
+			                                    Todos los asientos ocupados
+			                                </label>
+			                            </div>
+                       				 </div>
                                 </div>
                             </div>
                         </div>

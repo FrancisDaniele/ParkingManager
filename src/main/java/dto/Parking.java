@@ -1,73 +1,82 @@
 package dto;
 
 public class Parking {
-	private Integer parkId;
-	private String parkDesc;
-	private String parkMuni;
-	private Integer parkPlazas;
+	private Integer id;
+	private String nombre;
+	private String municipio;
+	private Integer disponibles;
+	private Integer totales;
 	
-	public final static Double preuHora = 1.5 ;
-	public final static String horari = "De 7:00 a 21:00";
-	
-	
-	public Parking(Integer parkId, String parkDesc, String parkMuni, Integer parkPlazas) {
+	public Parking(Integer id, String nombre, String municipio, Integer disponibles, Integer totales) {
 		super();
-		this.parkId = parkId;
-		this.parkDesc = parkDesc;
-		this.parkMuni = parkMuni;
-		this.parkPlazas = parkPlazas;
+		this.id = id;
+		this.nombre = nombre;
+		this.municipio = municipio;
+		this.disponibles = disponibles;
+		this.totales = totales;
 	}
 
+	public Parking(Integer id, String nombre, String municipio, Integer totales) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.municipio = municipio;
+		this.totales = totales;
+	}
+	
+	
 
-	public Integer getParkId() {
-		return parkId;
+	public Integer getId() {
+		return id;
 	}
 
-
-	public void setParkId(Integer parkId) {
-		this.parkId = parkId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-
-	public String getParkDesc() {
-		return parkDesc;
+	public String getNombre() {
+		return nombre;
 	}
 
-
-	public void setParkDesc(String parkDesc) {
-		this.parkDesc = parkDesc;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-
-	public String getParkMuni() {
-		return parkMuni;
+	public String getMunicipio() {
+		return municipio;
 	}
 
-
-	public void setParkMuni(String parkMuni) {
-		this.parkMuni = parkMuni;
+	public void setMunicipio(String municipio) {
+		this.municipio = municipio;
 	}
 
-
-	public Integer getParkPlazas() {
-		return parkPlazas;
+	public Integer getDisponibles() {
+		return disponibles;
 	}
 
-
-	public void setParkPlazas(Integer parkPlazas) {
-		this.parkPlazas = parkPlazas;
+	public void setDisponibles(Integer disponibles) {
+		this.disponibles = disponibles;
 	}
 
+	public Integer getTotales() {
+		return totales;
+	}
+
+	public void setTotales(Integer totales) {
+		this.totales = totales;
+	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((parkDesc == null) ? 0 : parkDesc.hashCode());
-		result = prime * result + ((parkId == null) ? 0 : parkId.hashCode());
+		result = prime * result + ((disponibles == null) ? 0 : disponibles.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((municipio == null) ? 0 : municipio.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((totales == null) ? 0 : totales.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -78,32 +87,51 @@ public class Parking {
 		if (getClass() != obj.getClass())
 			return false;
 		Parking other = (Parking) obj;
-		if (parkDesc == null) {
-			if (other.parkDesc != null)
+		if (disponibles == null) {
+			if (other.disponibles != null)
 				return false;
-		} else if (!parkDesc.equals(other.parkDesc))
+		} else if (!disponibles.equals(other.disponibles))
 			return false;
-		if (parkId == null) {
-			if (other.parkId != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!parkId.equals(other.parkId))
+		} else if (!id.equals(other.id))
+			return false;
+		if (municipio == null) {
+			if (other.municipio != null)
+				return false;
+		} else if (!municipio.equals(other.municipio))
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (totales == null) {
+			if (other.totales != null)
+				return false;
+		} else if (!totales.equals(other.totales))
 			return false;
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Parking [parkId=" + parkId + ", parkDesc=" + parkDesc + ", parkMuni=" + parkMuni + ", parkPlazas="
-				+ parkPlazas + "]";
+		return "Parking [id=" + id + ", nombre=" + nombre + ", municipio=" + municipio + ", disponibles=" + disponibles
+				+ ", totales=" + totales + "]";
 	}
 
+	public void add(Parking parking) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
-	
-	
-	
-
-	
-	
-	
 }
